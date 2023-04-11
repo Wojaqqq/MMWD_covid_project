@@ -1,41 +1,42 @@
 # MMWD_covid_project
 
-Zagadnienie dotyczy rozwiązania problemu dowozu żywienia do osób, które są na kwarantannie domowej. Każda restauracja dysponuje listą domów, które może obsłużyć, a także 
-ilością dostępnych posiłków. Ilość mieszkańców każdego domostwa determinuje zapotrzebowanie na posiłki oraz jest obsługiwane przez jedną firmę/może być obsługiwane przez 
-wiele firm. Dodatkowym parametrem jest odległość domów od restauracji. Chcemy zminimalizować sumę odległości między restauracjami a obsługiwanymi przez nie mieszkaniami 
-biorąc pod uwagę możliwości produkcyjne lokalów gastronomicznych. Zrealizujemy to przy pomocy algorytmu ewolucyjnego.
-
-Projekt realizowany w 3 osobowym zespole: Balbina Molerus, Tomasz Wojakowski, Bartosz Nieroda.
-
-**Dane wejściowe:**
-
-Lista restauracji z informacjami:
-  - możliwy zasięg dowozu 
-  - ilości dziennie produkowanych porcji posiłków
-
-Lista domów z informacjami:
-  - lokalizacja
-  - zapotrzebowanie na posiłki (porcje) 
-
-**Założenia:**
-
-  - dom otrzymuję całe zapotrzebowanie od jednej restauracji lub może przyjąć dzielone porcję od kilku.
-  - przepustowość restauracji dziennej jest stała
-  - zapotrzebowanie dzienne domów jest stałe
-  - zakładamy, że po każdym dostarczeniu do odbiorcy dostawca wraca do lokalu po kolejne porcje
-  - między mieszkaniem a restauracją jest jedna trasa 
+The issue relates to solving the problem of getting food to people who are in home quarantine. Each restaurant has a list of the homes it can serve, as well as the 
+the number of meals available. The number of residents in each home determines the demand for meals and is served by one company/can be served by 
+multiple companies. An additional parameter is the distance of the houses from the restaurant. We want to minimise the sum of the distances between the restaurants and the homes they serve 
+taking into account the capacity of the catering establishments. We will realise this using an evolutionary algorithm.
 
 
-**Model matematyczny:**
+Project carried out in a team of 3: Balbina Molerus, Tomasz Wojakowski, Bartosz Nieroda.
 
-Parametry:
-  - R - zbiór restauracji serwujących posiłki
-  - M - zbiór mieszkań z osobami na kwarantannie
-  - Di,j - droga dzieląca restauracje i mieszkania
-  - Pi - zapotrzebowanie porcji posiłków dla każdego mieszkania na kwarantannie
-  - Ji  - ilość możliwych do dostarczenia porcji posiłków przez restaurację
+**Input data:**
 
-Funkcja celu
+List of restaurants with information:
+  - possible delivery range 
+  - number of servings per day
+
+List of houses with information:
+  - location
+  - meal requirements (portions) 
+
+**Assumptions:**
+
+  - the house receives the entire demand from one restaurant or can accept split portions from several.
+  - the daily restaurant throughput is constant
+  - the daily demand of the houses is constant
+  - we assume that after each delivery, the supplier returns to the dwelling for further portions
+  - there is one route between the dwelling and the restaurant 
+
+
+**Mathematical model:**
+
+Parameters:
+  - R - collection of restaurants serving meals
+  - M - set of flats with people in quarantine
+  - Di,j - the path separating the restaurants and the flats
+  - Pi - meal portion requirement for each flat in quarantine
+  - Ji - number of possible meal portions delivered by the restaurant
+
+Objective function
 
 ![image](https://user-images.githubusercontent.com/49729749/111630480-b2691a80-87f2-11eb-82cd-6f33e918f1c7.png)
 
